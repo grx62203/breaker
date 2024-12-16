@@ -48,26 +48,19 @@
 ## 代码运行逻辑
 
 * **初始化** ：
-
 * 游戏入口文件 `main.py` 初始化 Pygame 并设置游戏窗口大小。
 * 创建 `Game` 类的实例 `game`，传入游戏窗口对象 `DISPLAYSURF`。
-
 * **游戏主循环** ：
-
 * 在 `main.py` 中，进入游戏主循环，不断处理事件、更新游戏状态和绘制游戏画面。
 * 事件处理：检查是否有退出事件（QUIT），若有则退出游戏。
 * 游戏更新：调用 `game.update()` 更新游戏逻辑。
 * 画面绘制：填充背景色，调用 `game.draw()` 绘制游戏元素，最后更新屏幕显示。
-
 * **游戏逻辑处理** ：
-
 * `game.py` 中包含游戏的主要逻辑处理，如玩家控制、球的运动、碰撞检测等。
 * 玩家控制：处理玩家的输入事件，如移动、发射球等。
 * 球的运动：更新球的位置和速度，处理球与墙壁、砖块、玩家角色的碰撞。
 * 碰撞检测：检测球与其他游戏元素的碰撞，并根据碰撞类型做出相应的处理。
-
 * **游戏元素处理** ：
-
 * `player.py` 处理玩家角色的逻辑，包括移动、动画等。
 * `ball.py` 处理球的逻辑，包括运动、碰撞检测等。
 * `block.py` 处理砖块的逻辑，包括绘制、碰撞检测等。
@@ -80,7 +73,6 @@
 ## 函数调用主线
 
 * **`main.py`** ：
-
 * `pygame.init()`：初始化 Pygame 库。
 * `pygame.display.set_mode(GAME_SIZE)`：设置游戏窗口大小。
 * `Game(DISPLAYSURF)`：创建 `Game` 类的实例。
@@ -91,30 +83,20 @@
 * `DISPLAYSURF.fill((255, 255, 255))`：填充背景色。
 * `game.draw()`：绘制游戏元素。
 * `pygame.display.update()`：更新屏幕显示。
-
 * **`game.py`** ：
-
 * `update()`：更新游戏逻辑。
 * `draw()`：绘制游戏元素。
-
 * **`player.py`** ：
-
 * `move()`：处理玩家角色的移动。
 * `draw()`：绘制玩家角色。
-
 * **`ball.py`** ：
-
 * `move()`：更新球的位置和速度。
 * `check_collision()`：处理球的碰撞检测。
 * `draw()`：绘制球。
-
 * **`block.py`** ：
-
 * `draw()`：绘制砖块。
 * `check_collision()`：处理砖块的碰撞检测。
-
 * **`level.py`** ：
-
 * `load_level()`：加载游戏关卡。
 * `next_level()`：切换到下一关。
 
@@ -136,7 +118,6 @@
 ## 数据结构
 
 * **列表（List）** ：
-
 * 用于存储游戏中的元素，如砖块、球等。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -148,9 +129,7 @@
           level_data =[line.strip()for line infile]
   return level_data
   ```
-
 * **字典（Dictionary）** ：
-
 * 用于存储游戏中的配置信息，如关卡数据、资源文件路径等。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -167,9 +146,7 @@
   'BLUE':(0,0,255)
   }
   ```
-
 * **元组（Tuple）** ：
-
 * 用于存储不可变的数据，如游戏窗口大小、颜色等。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -178,9 +155,7 @@
   # 在 const.py 中，使用元组存储游戏窗口大小
   GAME_SIZE =(800,600)
   ```
-
 * **集合（Set）** ：
-
 * 用于存储不重复的数据，如游戏中的音效文件路径。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -197,9 +172,7 @@
   'tai.WAV'
   }
   ```
-
 * **类（Class）** ：
-
 * 用于封装游戏中的对象，如玩家、球、砖块等。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -221,9 +194,7 @@
               img = pygame.transform.scale(img,(PLAYER_SIZE_W, PLAYER_SIZE_H))
               self.images.append( img )
   ```
-
 * **栈（Stack）** ：
-
 * 用于实现游戏中的撤销功能，例如玩家可以撤销上一步操作。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -252,9 +223,7 @@
   'blocks': self.blocks.get_state()
   }
   ```
-
 * **队列（Queue）** ：
-
 * 用于实现游戏中的任务队列，例如处理多个球的运动。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -274,9 +243,7 @@
   for ball in self.ball_queue:
               ball.update()
   ```
-
 * **图（Graph）** ：
-
 * 用于表示游戏中的复杂关系，例如关卡之间的连接。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -299,7 +266,6 @@
 ## 算法
 
 * **碰撞检测算法** ：
-
 * 用于检测球与墙壁、砖块、玩家角色的碰撞。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -312,9 +278,7 @@
   # 处理碰撞逻辑
   pass
   ```
-
 * **游戏循环算法** ：
-
 * 用于处理游戏的持续运行，不断更新和绘制游戏状态。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -337,9 +301,7 @@
   # 更新屏幕显示
       pygame.display.update()
   ```
-
 * **动画更新算法** ：
-
 * 用于更新玩家角色的动画。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -359,9 +321,7 @@
           self.preChangeTime = getCurrentTime()
           self.imageIndex =(self.imageIndex +1)%len(self.images)
   ```
-
 * **关卡加载算法** ：
-
 * 用于加载游戏关卡数据。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -373,9 +333,7 @@
           level_data =[line.strip()for line infile]
   return level_data
   ```
-
 * **游戏对象绘制算法** ：
-
 * 用于绘制游戏中的对象，如玩家、球、砖块等。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -386,9 +344,7 @@
   for obj in self.game_objects:
           obj.draw(self.surface)
   ```
-
 * **A 寻路算法**：
-
 * 用于在游戏中寻找最短路径，例如球在关卡中的运动路径。
 * 示例代码：
   ![img](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -421,9 +377,7 @@
 
   return came_from, cost_so_far
   ```
-
 * **深度优先搜索（DFS）** ：
-
 * 用于在游戏中搜索所有可能的路径，例如寻找隐藏的道具或关卡。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
@@ -443,9 +397,7 @@
 
   return visited
   ```
-
 * **广度优先搜索（BFS）** ：
-
 * 用于在游戏中搜索所有可能的路径，例如寻找最短的救援路径。
 * 示例代码：
   ![](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/grx62203/.vscode/extensions/marscode.marscode-extension-1.1.38/resource/images/languageIcon/python.svg)python
