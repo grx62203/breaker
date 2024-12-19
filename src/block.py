@@ -15,6 +15,7 @@ class Block(pygame.sprite.Sprite):
         super(Block, self).__init__()
         # 设置方块的类型
         self.blockType = blockType
+        # 加载方块的图像
         self.image = pygame.image.load( BLOCK_RES_FMT % blockType )
         # 缩放图像到指定的大小
         self.image = pygame.transform.scale(self.image, (SPRITE_SIZE_W, SPRITE_SIZE_H))
