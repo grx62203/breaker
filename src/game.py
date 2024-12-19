@@ -2,7 +2,6 @@
 import pygame
 # 从pygame库中导入所有常量
 from pygame.locals import *
-# 从const.py文件中导入所有常量
 from const import *
 # 从player.py文件中导入所有类
 from player import *
