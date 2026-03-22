@@ -8,7 +8,10 @@
 
 这段代码是游戏运行的核心部分，确保游戏的持续运行和交互。
 """
-# 导入pygame和sys模块
+
+# 导入pygame库和sys模块
+# pygame库是用于游戏开发的Python库
+# sys模块提供了与Python解释器紧密相关的功能或函数
 import pygame, sys
 # 从pygame.locals模块中导入所有常量
 from pygame.locals import *
